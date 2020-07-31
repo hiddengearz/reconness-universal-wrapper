@@ -30,7 +30,7 @@ Subsitutions can be used to replace an argument within the command you're execut
 
 `reconness-universal-wrapper exec "go [redacted]/tools/naabu -hL *subdomains -silent" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}}`
 
-`reconness-universal-wrapper exec "python3.8 [redacted]/tools/OneForAll/oneforall.py --target domains.txt --path *outputDir/*.txt run" --silent`
+`reconness-universal-wrapper exec "python3.8 [redacted]/tools/OneForAll/oneforall.py --target *subdomains --path *outputDir/*.txt run" --silent`
 
 `reconness-universal-wrapper exec "massdns -r [redacted]/tools/massdns/lists/resolvers.txt *subdomains -w *outputFile -o S" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}}`
 
