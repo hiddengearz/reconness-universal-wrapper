@@ -36,13 +36,13 @@ var cmdExec = &cobra.Command{
 			}
 
 			initConfig()
-		} else if fileExists(home + "/.rragent.yaml") { //else try the config in the default location
+		} else if fileExists(home + "/.rwrapper.yaml") { //else try the config in the default location
 			if debug {
-				fmt.Println("Using default config located at: " + home + "/.rragent.yaml")
+				fmt.Println("Using default config located at: " + home + "/.rwrapper.yaml")
 			}
 			initConfig()
 		} else { //otherwise no config specified/found
-			er("No config found at " + home + "/.rragent.yaml. Please specify a config location")
+			er("No config found at " + home + "/.rwrapper.yaml. Please specify a config location")
 		}
 
 		conf = readConfig() //read the config
@@ -65,7 +65,7 @@ var cmdExec = &cobra.Command{
 			}
 		}
 
-		for i, arg := range args { //this for loop is done seperately sowe don't create temp files if the above errors out
+		for i, arg := range args { //this for loop is done seperately so we don't create temp files if the above errors out
 			if arg == "*outputFile" { //Replace *outputFile with a tempfile
 				outputFile = CreateTmpFile()
 				args[i] = outputFile
@@ -135,7 +135,7 @@ var cmdExec = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(cmdExec)
-	cmdExec.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "location of the config file (default is $HOME/.rragent.yaml)")
+	cmdExec.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "location of the config file (default is $HOME/.rwrapper.yaml)")
 	cmdExec.PersistentFlags().BoolVar(&debug, "debug", false, "Enable debug mode")
 	cmdExec.PersistentFlags().BoolVar(&silent, "silent", false, "Don't print the commands output")
 
