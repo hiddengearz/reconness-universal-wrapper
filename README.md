@@ -6,7 +6,7 @@ For example [Massdns](https://github.com/blechschmidt/massdns) requires a file w
 
 `./bin/massdns -r lists/resolvers.txt domains.txt`
 
-`./reconness-universal-wrapper exec "./bin/massdns -r lists/resolvers.txt *subdomains -w *outputFile" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}} --silent`
+`reconness-universal-wrapper exec "./bin/massdns -r lists/resolvers.txt *subdomains -w *outputFile" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}} --silent`
 
 ### Subsitutions
 
@@ -28,11 +28,11 @@ Subsitutions can be used to replace an argument within the command you're execut
 
 ### Examples
 
-`./reconness-universal-wrapper exec "go [redacted]/tools/naabu -hL *subdomains -silent" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}}`
+`reconness-universal-wrapper exec "go [redacted]/tools/naabu -hL *subdomains -silent" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}}`
 
-`./reconness-universal-wrapper exec "python3.8 [redacted]/tools/OneForAll/oneforall.py --target domains.txt --path *outputDir/*.txt run" --silent`
+`reconness-universal-wrapper exec "python3.8 [redacted]/tools/OneForAll/oneforall.py --target domains.txt --path *outputDir/*.txt run" --silent`
 
-`./reconness-universal-wrapper exec "massdns -r [redacted]/tools/massdns/lists/resolvers.txt *subdomains -w *outputFile -o S" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}}`
+`reconness-universal-wrapper exec "massdns -r [redacted]/tools/massdns/lists/resolvers.txt *subdomains -w *outputFile -o S" -a api/targets/exportSubdomains/{{target}}/{{rootDomain}}`
 
 
 ### Installation
@@ -46,10 +46,10 @@ RUN wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
 RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 RUN /usr/local/go/bin/go get github.com/hiddengearz/reconness-universal-wrapper
-RUN ./reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>
+RUN reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>
 ```
 
-If you change your reconness username, password or domain name you'll need to update the config aswell. You can do this by typing the following in the cli/docker container `./reconness-universal-wrapper setup -u <new username> -p <new password> -s <new domain> --force`
+If you change your reconness username, password or domain name you'll need to update the config aswell. You can do this by typing the following in the cli/docker container `reconness-universal-wrapper setup -u <new username> -p <new password> -s <new domain> --force`
 
 ### Setup flags
 | Flags  | Explination   | 
