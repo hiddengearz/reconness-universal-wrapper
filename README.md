@@ -21,7 +21,7 @@ Subsitutions can be used to replace an argument within the command you're execut
 ### Flags
 | Flags  | Explination   | 
 |---|---|
-| -c, --config  | (optional) location to save the config file too (default is $HOME/.rwrapper.yaml) |
+| -c, --config  | (optional) location to load the config file from (default is $HOME/.rwrapper.yaml) |
 | --debug | Enable debug mode  |
 | -h, --help | Display help menu  |
 | --silent |  Don't print the commands output |
