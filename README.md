@@ -37,6 +37,8 @@ Subsitutions can be used to replace an argument within the command you're execut
 
 ### Installation
 
+`go get github.com/hiddengearz/reconness-universal-wrapper`
+
 Modify your [Reconness Dockerfile](https://github.com/reconness/reconness/blob/master/src/Dockerfile) by adding the following to the Agents dependencies section.
 
 ```
