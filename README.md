@@ -39,7 +39,7 @@ Subsitutions can be used to replace an argument within the command you're execut
 
 #### Non-docker
 
-`go get github.com/hiddengearz/reconness-universal-wrapper`
+`go get -u github.com/hiddengearz/reconness-universal-wrapper`
 
 `reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>`
 
@@ -53,7 +53,7 @@ RUN apt-get install -y wget
 RUN wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
 RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-RUN /usr/local/go/bin/go get github.com/hiddengearz/reconness-universal-wrapper
+RUN /usr/local/go/bin/go get -u github.com/hiddengearz/reconness-universal-wrapper
 RUN reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>
 ```
 
