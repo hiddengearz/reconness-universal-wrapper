@@ -1,6 +1,6 @@
 # Reconness Universal Wrapper
 
-Reconness Universal Wrapper is a wrapper/framework that is meant to assist with creating [Reconness Agents](https://github.com/reconness/reconness-agents) within the [Reconness Web Application](https://github.com/reconness/reconness). It provides additional functionality that is not currently possibile in reconness and can only be added by modifying the source code of the agent or making a wrapper for it. It does this by allowing you to use "subsitutions" when executing commands.
+Reconness Universal Wrapper is a wrapper/framework that assists with creating [Reconness Agents](https://github.com/reconness/reconness-agents) within the [Reconness Web Application](https://github.com/reconness/reconness). It provides additional functionality that is not currently possibile in reconness and can only be added by modifying the source code of the agent or making a wrapper for it. It does this by allowing you to use "subsitutions" when executing commands.
 
 For example [Massdns](https://github.com/blechschmidt/massdns) requires a file with a list of domains to be used as an argument. In reconness there is no way to create that file thus you need to make your own wrapper that calls reconness's API and creates a file as the argument. Instead you can use the universal wrapper:
 
