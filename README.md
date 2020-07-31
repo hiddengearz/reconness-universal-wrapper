@@ -54,10 +54,10 @@ RUN wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
 RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 RUN /usr/local/go/bin/go get -u github.com/hiddengearz/reconness-universal-wrapper
-RUN reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>
+RUN cd /root/go/bin/ && ./reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>
 ```
 
-If you change your reconness username, password or domain name you'll need to update the config aswell. You can do this by typing the following in the cli/docker container `reconness-universal-wrapper setup -u <new username> -p <new password> -s <new domain> --force`
+If you change your reconness username, password or domain name you'll need to update the config aswell. You can do this by typing the following in the cli/docker container `cd ./root/go/bin/reconness-universal-wrapper setup -u <new username> -p <new password> -s <new domain> --force`
 
 ### Setup flags
 | Flags  | Explination   | 
