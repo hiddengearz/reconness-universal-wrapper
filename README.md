@@ -37,7 +37,13 @@ Subsitutions can be used to replace an argument within the command you're execut
 
 ### Installation
 
+#### Non-docker
+
 `go get github.com/hiddengearz/reconness-universal-wrapper`
+
+`reconness-universal-wrapper setup -u <reconness username> -p <reconness password> -s <reconness.mydomain.com>`
+
+#### Docker:
 
 Modify your [Reconness Dockerfile](https://github.com/reconness/reconness/blob/master/src/Dockerfile) by adding the following to the Agents dependencies section.
 
