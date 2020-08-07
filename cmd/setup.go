@@ -19,7 +19,7 @@ var cmdSetup = &cobra.Command{
 }
 
 func init() {
-	cmdSetup.PersistentFlags().StringVarP(&conf.server, "server", "s", "", "domain name for reconness server e.g mydomain.com")
+	cmdSetup.PersistentFlags().StringVarP(&conf.server, "server", "s", "", "full url to your reconness server e.g https://mydomain.com:8080")
 	cmdSetup.MarkFlagRequired("server")
 	viper.BindPFlag("server", cmdSetup.PersistentFlags().Lookup("server"))
 

@@ -46,7 +46,6 @@ var cmdExec = &cobra.Command{
 		}
 
 		conf = readConfig() //read the config
-		conf.server = "https://" + conf.server
 
 		args := strings.Fields(arguments[0]) //split the argument given
 
