@@ -70,10 +70,10 @@ func initConfig() {
 		if err != nil {
 			er(err)
 		}
-		cfgFile = home + "/" + ".reconnes-agent.yaml"
+		cfgFile = home + "/" + ".rwrapper.yaml"
 		// Search config in home directory with name ".cobra" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".reconnes-agent")
+		viper.SetConfigName(".rwrapper")
 		viper.SetConfigType("yaml")
 	}
 

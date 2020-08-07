@@ -135,7 +135,7 @@ var cmdExec = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(cmdExec)
-	cmdExec.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "location of the config file (default is $HOME/.rwrapper.yaml)")
+	cmdExec.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "(optional) location of the config file (default is $HOME/.rwrapper.yaml)")
 	cmdExec.PersistentFlags().BoolVar(&debug, "debug", false, "Enable debug mode")
 	cmdExec.PersistentFlags().BoolVar(&silent, "silent", false, "Don't print the commands output")
 
