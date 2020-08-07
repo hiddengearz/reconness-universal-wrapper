@@ -68,3 +68,4 @@ If you change your reconness username, password or domain name you'll need to up
 |-p, --password string |   password used to connect to reconness server |
 |-s, --server string |     domain name for reconness server e.g mydomain.com |
 |-u, --username string |   username used to connect to reconness server |
+ 
